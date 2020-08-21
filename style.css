@@ -1,0 +1,103 @@
+/*
+Base1: #343434,
+Base2: #2d4059,
+Base3: #ea5455,
+Base4: #fde9c9
+
+
+*/
+
+body {
+  font-size: 1em;
+  background-color: #343434;
+  color: #fde9c9;
+}
+header {
+  margin-bottom: 200px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+
+a {
+    color: #fde9c9;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+a:hover {
+  color:#2d4059;
+}
+
+a[data-name] {
+  display:block;
+  position: fixed;
+  top: 0;
+  background-color: #ea5455;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: 0.5s all ease-in;
+  z-index: 2;
+
+}
+
+
+nav {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ea5455;
+  text-align: center;
+  margin-bottom: 150px;
+  width: 100%;
+}
+nav a {
+  flex: 1;
+}
+/* In the partial menu activated on scroll the nav gets a class of partial menu */
+nav.partial-menu {
+  visibility: hidden;
+  opacity:0; /* Used for effect */
+  flex-direction: column;
+  padding :0;
+  align-items: stretch;
+  transform:translateY(-100%);
+  position: fixed;
+  top: 0;
+  transition: 0.5s transform ease-in;
+
+}
+
+nav.partial-menu a {
+  border: 1px solid black;
+}
+/* In the partial menu activated on scroll, the hamburger icon gets a class of active */
+a[data-name].active {
+  transform: translateY(0%);
+}
+a[data-name].active:hover + nav.partial-menu, nav.partial-menu:hover {
+  transform: translateY(23%);
+  opacity: 1;
+  visibility: visible;
+
+}
+
+
+.intro {
+  margin-top: 200px;
+}
+
+
+/* Used to prevent page from jumping when the nav disappears */
+.navPlaceholder {
+  display:none;
+}
+nav.partial-menu + .navPlaceholder {
+  display: block;
+  height: 124px;
+
+}
