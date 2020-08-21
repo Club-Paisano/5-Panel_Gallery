@@ -6,6 +6,7 @@ Future Development:
 -Make it so the area around the anchor tags arent clickable, just the anchor tag
 -Add a panel of images
 -Fix where the page jumps during scrolling (FIXED)
+-Arrange the rest of the content of the page well
 */
 
 const hamburger = document.querySelector("a[data-name=hamburger]");

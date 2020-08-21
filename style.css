@@ -20,6 +20,14 @@ h1 {
   font-size: 2em;
 }
 
+section img, section h1, section p {
+  display:none;
+}
+
+section {
+  height: 1000px;
+
+}
 
 a {
     color: #fde9c9;
